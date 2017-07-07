@@ -29,23 +29,23 @@
 				<div class="collapse navbar-collapse" id="navbar-1">
 					
 					<ul class="nav navbar-nav navbar-right">
-							<li ng-show="!usuario.administrador"><a class="menu-navbar" href="http://localhost:8080/TFG3/usuarioPerfil.html">PERFIL</a></li>
-							
-						<li ng-show="usuario.administrador"><a class="menu-navbar" href="http://localhost:8080/TFG3/nuevoEjemplar.html">NUEVO EJEMPLAR</a></li>
-						<li ng-show="usuario.administrador" class="dropdown"><a  href="#" class="dropdown-toggle menu-navbar" data-toggle="dropdown" >USUARIOS<span class="caret"></span></a> 
-							<ul class="dropdown-menu">
-								<li><a href="http://localhost:8080/TFG3/usuarios.html">Usuarios</a></li>	
-								<li><a href="http://localhost:8080/TFG3/nuevoUsuario.html">Nuevo Usuario</a></li>			
-							</ul>
-						</li>	
+						<li><a class="menu-navbar" href="http://localhost:8080/Zinal/inicio.html">INICIO</a></li>
+							<li><a class="menu-navbar" href="http://localhost:8080/Zinal/usuarioPerfil.html">PERFIL</a></li>
 						
 
-					<li ng-show="usuario.administrador" class="dropdown"><a  href="#" class="dropdown-toggle menu-navbar" data-toggle="dropdown" >PRESTAMOS<span class="caret"></span></a> 
+					<li ng-show="usuario.tipoUsuario==='PROFESOR' || usuario.tipoUsuario==='ADMIN'" class="dropdown"><a  href="#" class="dropdown-toggle menu-navbar" data-toggle="dropdown" >FUNCIONALIDAD<span class="caret"></span></a> 
 							<ul class="dropdown-menu">
-								<li><a href="http://localhost:8080/TFG3/nuevoPrestamo.html">Nuevo Prestamo</a></li>	
-								<li><a href="http://localhost:8080/TFG3/finalizarPrestamo.html">Finalizar Prestamo</a></li>	
+								
+								<li ng-show="usuario.tipoUsuario==='ADMIN'"><a href="http://localhost:8080/Zinal/usuarios.html">Usuarios</a></li>	
+								<li><a href="http://localhost:8080/Zinal/nuevoUsuario.html">Nuevo Usuario</a></li>			
 								<li class="divider"></li>	
-								<li> <a href="http://localhost:8080/TFG3/festivos.html">Añadir Festivos</a></li>
+								<li><a href="http://localhost:8080/Zinal/nuevoPrestamo.html">Nuevo Prestamo</a></li>	
+								<li><a href="http://localhost:8080/Zinal/finalizarPrestamo.html">Finalizar Prestamo</a></li>	
+								<li class="divider"></li>
+								<li><a href="http://localhost:8080/Zinal/nuevaCategoria.html">Nueva Categoria</a></li>	
+								<li class="divider"></li>
+								<li><a href="http://localhost:8080/Zinal/nuevoEjemplar.html">Nuevo ejemplar</a></li>
+								
 								
 							</ul>
 						</li>
